@@ -1,19 +1,50 @@
-public class OopsBannerUC4 {
+public class OOPSBannerUC6 {
+
+    // Static method to generate letter O pattern
+    public static String[] buildO() {
+        return new String[]{
+                " *** ",
+                "*   *",
+                "*   *",
+                "*   *",
+                " *** "
+        };
+    }
+
+    // Static method to generate letter P pattern
+    public static String[] buildP() {
+        return new String[]{
+                "**** ",
+                "*   *",
+                "**** ",
+                "*    ",
+                "*    "
+        };
+    }
+
+    // Static method to generate letter S pattern
+    public static String[] buildS() {
+        return new String[]{
+                " ****",
+                "*    ",
+                " *** ",
+                "    *",
+                "**** "
+        };
+    }
 
     public static void main(String[] args) {
 
-        // Store banner lines in a String array
-        String[] banner = {
-                String.join(" ", "OOOOO", " ", "OOOOO", " ", "PPPPP", " ", "SSSSS"),
-                String.join(" ", "O", "   ", "O", "   ", "P", "   ", "P", "   ", "S"),
-                String.join(" ", "O", "   ", "O", "   ", "PPPPP", " ", "SSSSS"),
-                String.join(" ", "O", "   ", "O", "   ", "P", "   ", " ", "   ", "S"),
-                String.join(" ", "OOOOO", " ", "OOOOO", " ", "P", " ", "SSSSS")
-        };
+        // Build letters using helper methods
+        String[] O = buildO();
+        String[] P = buildP();
+        String[] S = buildS();
 
-        // Print banner using loop
-        for (String line : banner) {
-            System.out.println(line);
+        int height = O.length;
+
+        // Loop to print banner OOPS
+        for (int i = 0; i < height; i++) {
+            System.out.println(O[i] + "  " + O[i] + "  " + P[i] + "  " + S[i]);
         }
     }
 }
